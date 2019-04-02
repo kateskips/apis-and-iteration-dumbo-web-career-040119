@@ -16,10 +16,13 @@ def get_character_movies_from_api(character_name)
   # this collection will be the argument given to `print_movies`
   #  and that method will do some nice presentation stuff like puts out a list
   #  of movies by title. Have a play around with the puts with other info about a given film.
+  films_for_character = response_hash["results"][0]["films"] 
+  RestClient.get()
 end
 
 def print_movies(films)
   # some iteration magic and puts out the movies in a nice list
+
 end
 
 def show_character_movies(character)
