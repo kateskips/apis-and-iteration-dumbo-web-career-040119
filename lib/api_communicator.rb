@@ -15,7 +15,10 @@ def get_character_movies_from_api(character_name)
   # this collection will be the argument given to `print_movies`
   #  and that method will do some nice presentation stuff like puts out a list
   #  of movies by title. Have a play around with the puts with other info about a given film.
-  films_for_character = response_hash["results"][0]["films"] 
+   character_data = response_hash["results"].find {|char| char["name"] == character_name}
+   binding.pry
+
+  # films_for_character = response_hash["results"][0]["films"]
   RestClient.get()
 end
 
